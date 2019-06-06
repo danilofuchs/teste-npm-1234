@@ -1,3 +1,3 @@
-const toUpperCase = string => string.toUpperCase();
+const toUpperCas = string => string.toUpperCase();
 
-export default toUpperCase;
+export default toUpperCas;
