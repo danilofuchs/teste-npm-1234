@@ -1,0 +1,9 @@
+{
+  "name": "teste-npm-1234",
+  "version": "1.0.0",
+  "description": "testing npm and semantic-release",
+  "main": "index.js",
+  "author": "Danilo Fuchs",
+  "license": "MIT",
+  "private": false
+}
