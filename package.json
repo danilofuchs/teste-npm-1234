@@ -1,9 +1,36 @@
 {
   "name": "teste-npm-1234",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "testing npm and semantic-release",
   "main": "index.js",
   "author": "Danilo Fuchs",
   "license": "MIT",
-  "private": false
+  "private": false,
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook"
+    }
+  },
+  "scripts": {
+    "semantic-release": "semantic-release"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danilofuchs/teste-npm-1234.git"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^8.0.0",
+    "@commitlint/config-conventional": "^8.0.0",
+    "@semantic-release/release-notes-generator": "^7.1.4",
+    "commitizen": "^3.1.1",
+    "cz-conventional-changelog": "2.1.0",
+    "husky": "^2.4.0",
+    "semantic-release": "^15.13.12"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
