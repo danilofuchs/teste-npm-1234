@@ -5,18 +5,13 @@ phases:
     runtime-versions:
       nodejs: 8
     commands:
-      # Install yarn natively https://yarnpkg.com/en/docs/install#linux-tab
-      - apt-get update && apt-get -y install apt-transport-https
-      - curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
-      - echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-      - apt-get update && apt-get install yarn -y
-      - yarn install
+      - npm install
   build:
     commands:
       # - yarn build
   post_build:
     commands:
-      - yarn run semantic-release
+      - npm run semantic-release
 cache:
   paths:
     - node_modules
